@@ -20,7 +20,7 @@ export class FeedController {
   }
 
   @Get('all')
-  async getAllPosts(@Query('take') take:number= 20, @Query('skip') skip:number = 20): Promise<FeedPost[]>{ 
+  async getAllPosts(@Query('take') take:number= 20, @Query('skip') skip:number = 0): Promise<FeedPost[]>{ 
     take = take >20 ? 20 : take;
     return await this.feedService.getPosts(take,skip)
 
