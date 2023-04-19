@@ -28,4 +28,9 @@ export class FeedService {
     deletePost(id:number ):Promise<DeleteResult>{
         return this.feedPostRepository.delete(id);
     }
+
+    async getPosts(take:number=1 ,skip : number=1):Promise<FeedPost[]>{
+        const [posts, _] = await this.feedPostRepository.findAndCount({take, skip})
+        return posts
+    }
 }
