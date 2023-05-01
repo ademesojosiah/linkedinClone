@@ -138,8 +138,8 @@ Success
 | field           | data_type | constraints | enums            |
 | --------------- | --------- | ----------- | ---------------- |
 | ProductName     | string    | required    |                  |
-| ProductCategory | enums     | required    | enum1,enum2      |
-| OrderType       | enums     | required    | enum1,enum2      |
+| ProductCategory | enums     | required    | gadgets, automobile, electronics, groceries|
+| OrderType       | enums     | required    | return, purchase, in stock, out of stock|
 | sellingPrice    | number    | required    |                  |
 | costPrice       | number    | required    |                  |
 | quantityInStock | number    | required    |                  |
